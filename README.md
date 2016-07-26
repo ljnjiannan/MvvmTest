@@ -19,7 +19,7 @@ An Android Project of MVVM Mode
 * Gradle Plugin 1.5.0-alpha1以上
 　　
 然后就是谷歌爸爸亲自教育我们构建dataBinding环境的方法啦！
-![](nnblog/14694614808850.jpg)
+![](http://oawnlw8zg.bkt.clouddn.com/14694614808850.jpg)
 在你需要使用dataBinding的module中的build.gradle中添加代码
 
 ```
