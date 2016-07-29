@@ -19,5 +19,5 @@ public class MainActivity extends AppCompatActivity {
     ViewModel viewModel=new ViewModel(this);
     binding.setViewModel(viewModel);
   }
-  
+
 }
