@@ -1,4 +1,4 @@
-package com.nannan.mvvmtest.Variable;
+package com.nannan.mvvmtest.viewmodel;
 
 /**
  * @author ljnjiannan

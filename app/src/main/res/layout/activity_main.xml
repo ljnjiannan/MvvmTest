@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-  xmlns:android="http://schemas.android.com/apk/res/android">
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <data>
-    <variable name="user" type="com.nannan.mvvmtest.Variable.User"/>
+    <variable name="user" type="com.nannan.mvvmtest.viewmodel.User"/>
+    <variable name="viewModel" type="com.nannan.mvvmtest.viewmodel.ViewModel"/>
+    <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
   </data>
 
   <LinearLayout
@@ -13,5 +16,12 @@
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="@{user.name}"/>
+
+    <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layoutManager="@{LayoutManagers.linear()}"
+      app:items="@{viewModel.items}"
+      app:itemView="@{viewModel.itemView}"/>
   </LinearLayout>
 </layout>
