@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <data>
-    <variable name="user" type="com.nannan.mvvmtest.viewmodel.User"/>
-    <variable name="viewModel" type="com.nannan.mvvmtest.viewmodel.ViewModel"/>
-    <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
-  </data>
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
   <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="@{user.name}"/>
-
-    <android.support.v7.widget.RecyclerView
+    <FrameLayout
+      android:id="@+id/content"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:layoutManager="@{LayoutManagers.linear()}"
-      app:items="@{viewModel.items}"
-      app:itemView="@{viewModel.itemView}"/>
+      android:layout_height="match_parent" />
   </LinearLayout>
 </layout>
