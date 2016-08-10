@@ -1,10 +1,11 @@
-package com.nannan.mvvmtest;
+package com.nannan.mvvmtest.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
+import com.nannan.mvvmtest.R;
 import com.nannan.mvvmtest.databinding.ActivityMainBinding;
 import com.nannan.mvvmtest.fragment.RecyclerViewFragment;
 
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     initView();
   }
 
-  private void initView(){
-    Fragment fragment=new RecyclerViewFragment();
+  private void initView() {
+    Fragment fragment = new RecyclerViewFragment();
     getSupportFragmentManager().beginTransaction()
         .replace(R.id.content, fragment)
         .commit();

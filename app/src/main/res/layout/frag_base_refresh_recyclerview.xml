@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <variable name="viewModel" type="com.nannan.mvvmtest.base.vm.BaseRefreshRecyclerViewModel"/>
+    <import type= "me.tatarka.bindingcollectionadapter.LayoutManagers"/>
+  </data>
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:onRefreshListener="@{viewModel.onRefreshListener}"
+      app:refreshing="@{viewModel.isRefreshing}">
+
+      <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:itemView="@{viewModel.newsItemView}"
+        app:items="@{viewModel.newsList}"
+        app:layoutManager="@{LayoutManagers.linear()}"
+        app:onLoadMoreCommand="@{viewModel.onLoadMoreCommand}"/>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+  </LinearLayout>
+</layout>
